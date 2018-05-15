@@ -5,8 +5,8 @@ import './App-Body.css';
 class Body extends React.Component {
     render() {
       return (
-        <div className="">
-          
+        <div className="body">
+          <h1>Body</h1>
         </div>
       );
     }
