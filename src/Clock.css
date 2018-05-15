@@ -1,0 +1,8 @@
+.App-header-clock {
+    color: #EEEEEE;
+    background-color: #222;
+    padding-right: 1%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
