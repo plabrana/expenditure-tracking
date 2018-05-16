@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Theme-button.css';
 
 class ThemeButton extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ThemeButton extends React.Component {
   
     render() {
       return (
-        <button className="theme-button" onClick={this.handleClick}>
+        <button className={this.state.isDarkTheme ? "theme-dark" : "theme-light"} onClick={this.handleClick}>
           {this.state.isDarkTheme ? 'Dark' : 'Light'}
         </button>
       );
