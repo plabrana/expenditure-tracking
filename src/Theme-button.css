@@ -14,3 +14,16 @@
 .theme-dark:focus {
     display: none;
 }
+
+.theme-light {
+    display: inline-block;
+    position: absolute;
+    margin-left: 0.5rem;
+    margin-top: 1.1rem;
+    border-radius: 0.2rem;
+    background-color: #EEE;
+    color: #222;
+    border-style: none;
+    font-size: 1em;
+    font-weight: bold;
+}
