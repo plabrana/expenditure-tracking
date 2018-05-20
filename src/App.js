@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './App-Header';
-import Body from './App-Body';
+//import Body from './App-Body';
 import Clock from './Clock';
 import ThemeButton from './Theme-button';
+import NavBar from './Navigation-bar';
 import './App.css';
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
         <ThemeButton />
         <Clock />
         <Header />
-        <Body />
+        <NavBar />
       </div>
     );
   }
