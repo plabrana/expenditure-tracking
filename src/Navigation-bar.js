@@ -1,20 +1,64 @@
-import React from 'react';
-import './Navigation-bar.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./Navigation-bar.css"
 
-class NavigationBar extends React.Component {
-  render() {
-    return (
-      <div className="navigation-bar">
-        <ul>
-            <li><a href="http://localhost:3000/">Home</a></li>
-            <li><a href="http://localhost:3000/">New Purchase</a></li>
-            <li><a href="http://localhost:3000/">Contact</a></li>
-            <li><a href="http://localhost:3000/">About</a></li>
-        </ul>
-      </div>
-    );
+const routes = [
+  {
+    path: "/",
+    exact: true,
+    sidebar: () =><div>Home!</div>,
+    main: () => <h2>Home</h2>
+  },
+  {
+    path: "/purchases",
+    sidebar: () =><div></div>,
+    main: () => <h2>Register New Purchase</h2>
+  },
+  {
+    path: "/summary",
+    sidebar: () =><div></div>,
+    main: () => <h2>Monthly Summary</h2>
   }
-}
+];
 
+const NavBar = () => (
+  <Router>
+    <div style={{ display: "flex" }}>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/purchases">New Purchase</Link>
+          </li>
+          <li>
+            <Link to="/summary">Summary</Link>
+          </li>
+        </ul>
 
-export default NavigationBar;
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.sidebar}
+          />
+        ))}
+      </div>
+
+      <div style={{ flex: 1, padding: "10px" }}>
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        ))}
+      </div>
+    </div>
+  </Router>
+);
+
+export default NavBar;
