@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './App-Header';
-//import Body from './App-Body';
 import Clock from './Clock';
 import ThemeButton from './Theme-button';
 import NavBar from './Navigation-bar';
