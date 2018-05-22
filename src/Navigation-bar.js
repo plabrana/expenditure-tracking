@@ -1,22 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./Navigation-bar.css"
 
 const routes = [
   {
     path: "/",
     exact: true,
-    sidebar: () =><div>Home!</div>,
     main: () => <h2>Home</h2>
   },
   {
     path: "/purchases",
-    sidebar: () =><div></div>,
     main: () => <h2>Register New Purchase</h2>
   },
   {
     path: "/summary",
-    sidebar: () =><div></div>,
     main: () => <h2>Monthly Summary</h2>
   }
 ];
