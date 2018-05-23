@@ -6,21 +6,21 @@ const routes = [
   {
     path: "/",
     exact: true,
-    main: () => <h2>Home</h2>
+    sidebar: () => <h2>Home</h2>
   },
   {
     path: "/purchases",
-    main: () => <h2>Register New Purchase</h2>
+    sidebar: () => <h2>Register New Purchase</h2>
   },
   {
     path: "/summary",
-    main: () => <h2>Monthly Summary</h2>
+    sidebar: () => <h2>Monthly Summary</h2>
   }
 ];
 
 const NavBar = () => (
   <Router>
-    <div style={{ display: "flex" }}>
+    <div className="navigation-bar">
       <div>
         <ul>
           <li>
@@ -40,17 +40,6 @@ const NavBar = () => (
             path={route.path}
             exact={route.exact}
             component={route.sidebar}
-          />
-        ))}
-      </div>
-
-      <div style={{ flex: 1, padding: "10px" }}>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.main}
           />
         ))}
       </div>

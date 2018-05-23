@@ -16,9 +16,11 @@ class ThemeButton extends React.Component {
   
     render() {
       return (
-        <button className={this.state.isDarkTheme ? "theme-dark" : "theme-light"} onClick={this.handleClick}>
-          {this.state.isDarkTheme ? 'Dark' : 'Light'}
-        </button>
+        <div className="theme-button">
+          <button className={this.state.isDarkTheme ? "theme-dark" : "theme-light"} onClick={this.handleClick}>
+            {this.state.isDarkTheme ? 'Dark' : 'Light'}
+          </button>
+        </div>
       );
     }
   }
