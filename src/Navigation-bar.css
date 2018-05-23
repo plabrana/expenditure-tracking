@@ -1,3 +1,9 @@
+navigation-bar {
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -22,5 +28,6 @@ li a:hover {
 }
 
 h2 {
-    padding-left: 150px;
+    position:absolute;
+    left: 170px;
 }
