@@ -1,6 +1,6 @@
 import React from 'react';
 import './Transactions-table.css';
-import firebase from "firebase";
+//import firebase from "firebase";
 
 
 class Transactions extends React.Component{
