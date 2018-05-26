@@ -1,31 +1,19 @@
 .form {
     display: block;
-    left: 175px;
+    left: 200px;
     position: absolute;
-    top: 180px;
+    top: 230px;
     width: 400px;
     height: 400px;
     overflow: visible;
 }
 
-
-.form-container{
-
-}
-
-.form-item {
-
-}
-
-.form-item-label {
-    
-}
-
 .form-item-input {
+    font-size: 15px;
     margin-left: 5px;
     margin-bottom: 20px;
     margin-top: 5px;
-    padding: 4px;
+    padding: 6px;
     height: 35px;
     box-sizing: border-box;
     width: 100%;
@@ -37,19 +25,12 @@
     outline: none;
 }
 
-.form-price {
-
-}
-
-.form-price-label {
-
-}
-
 .form-price-input {
+    font-size: 15px;
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 20px;
-    padding: 4px;
+    padding: 6px;
     box-sizing: border-box;
     height: 35px;
     width: 100%;
@@ -61,19 +42,12 @@
     outline: none;
 }
 
-.form-category {
-
-}
-
-.form-category-label {
-
-}
-
 .form-category-selector {
+    font-size: 15px;
     margin-left: 5px;
     margin-bottom: 20px;
-    martin-top: 5px;
-    padding: 4px;
+    martin-top: 10px;
+    padding: 6px;
     height: 35px;
     width: 100%;
     border: none;
@@ -98,4 +72,16 @@
 
 .form-submit:focus {
     outline: none;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
 }

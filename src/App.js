@@ -4,6 +4,8 @@ import Clock from './Clock';
 import ThemeButton from './Theme-button';
 import NavBar from './Navigation-bar';
 import './App.css';
+import firebase from "firebase";
+
 
 class App extends React.Component {
   render() {
