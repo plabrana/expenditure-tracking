@@ -1,6 +1,101 @@
 .form {
-    display: inline-block;
+    display: block;
     left: 175px;
-    position: fixed;
-    top: 200px;
+    position: absolute;
+    top: 180px;
+    width: 400px;
+    height: 400px;
+    overflow: visible;
+}
+
+
+.form-container{
+
+}
+
+.form-item {
+
+}
+
+.form-item-label {
+    
+}
+
+.form-item-input {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 4px;
+    height: 35px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-item-input:focus {
+    outline: none;
+}
+
+.form-price {
+
+}
+
+.form-price-label {
+
+}
+
+.form-price-input {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 4px;
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-price-input:focus {
+    outline: none;
+}
+
+.form-category {
+
+}
+
+.form-category-label {
+
+}
+
+.form-category-selector {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    martin-top: 5px;
+    padding: 4px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-category-selector:focus {
+    outline: none;
+}
+
+.form-submit {
+    padding: 8px 16px;
+    margin-top: 25px;
+    width: 100px;
+    border: none;
+    background-color: #222;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+}
+
+.form-submit:focus {
+    outline: none;
 }
