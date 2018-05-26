@@ -5,19 +5,37 @@ class PurchaseForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        value: ''
+        valueItem: ' ',
+        valuePrice: ' ',
+        valueCategory: ' '
       };
   
-      this.handleChange = this.handleChange.bind(this);
+      this.handleItemChange = this.handleItemChange.bind(this);
+      this.handlePriceChange = this.handlePriceChange.bind(this);
+      this.handleCategoryChange = this.handleCategoryChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
-    handleChange(event) {
-      this.setState({value: event.target.value});
+    handleItemChange(event) {
+      this.setState({
+        valueItem: event.target.value
+      });
+    }
+
+    handlePriceChange(event) {
+      this.setState({
+        valuePrice: event.target.value
+      });
+    }
+
+    handleCategoryChange(event) {
+      this.setState({
+        valueCategory: event.target.value
+      });
     }
   
     handleSubmit(event) {
-      alert('An essay was submitted: ' + this.state.value);
+      alert('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
       event.preventDefault();
     }
   
@@ -26,16 +44,31 @@ class PurchaseForm extends React.Component {
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
             <div className='form-item-label'>
-                <label>
-                    Item: 
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </label>
+              <label>
+                Item: 
+                <input type="text" value={this.state.valueItem} onChange={this.handleItemChange} />
+              </label>
             </div>
             <div className='form-price-label'>
-                <label>
-                    Price: 
-                    <input type="number" value={this.state.value} onChange={this.handleChange} />
-                </label>
+              <label>
+                Price: 
+                <input type="number" value={this.state.valuePrice} onChange={this.handlePriceChange} />
+              </label>
+            </div>
+            <div className='form-category-label'>
+              <label>
+                Category:
+                <select type="text" value={this.state.valueCategory} onChange={this.handleCategoryChange}>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                  <option valueCategory="Falopa">Falopa</option>
+                </select>
+              </label>
             </div>
                 <input type="submit" value="Submit" />
             </form>
