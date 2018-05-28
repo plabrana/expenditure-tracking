@@ -13,12 +13,7 @@ const routes = [
   {
     path: "/purchases",
     sidebar: () => <h2>Register New Purchase</h2>,
-<<<<<<< HEAD
-    //main: () => <NewPurchase />
-
-=======
     main: () => <PurchaseForm />
->>>>>>> a66a13545773ffddd9344bdfc80bc091b69cd3f6
   },
   {
     path: "/transactions",
