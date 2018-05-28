@@ -9,12 +9,12 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-        <div className="app">
-          <ThemeButton />
-          <Clock />
-          <Header />
-          <NavBar />
-        </div>
+      <div className="app">
+        <ThemeButton />
+        <Clock />
+        <Header />
+        <NavBar />
+      </div>
     );
   }
 }

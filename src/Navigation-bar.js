@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import "./Navigation-bar.css"
 
 const routes = [
@@ -10,7 +10,9 @@ const routes = [
   },
   {
     path: "/purchases",
-    sidebar: () => <h2>Register New Purchase</h2>
+    sidebar: () => <h2>Register New Purchase</h2>,
+    //main: () => <NewPurchase />
+
   },
   {
     path: "/summary",
