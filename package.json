@@ -1,9 +1,11 @@
 {
-  "name": "elpancho",
+  "name": "expenditure-trackig",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "npm": "^6.0.1",
+    "firebase": "^5.0.4",
+    "lodash": "^4.17.10",
+    "npm": "^6.1.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",

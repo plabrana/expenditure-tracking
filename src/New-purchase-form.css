@@ -1,0 +1,87 @@
+.form {
+    display: block;
+    left: 200px;
+    position: absolute;
+    top: 230px;
+    width: 400px;
+    height: 400px;
+    overflow: visible;
+}
+
+.form-item-input {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 6px;
+    height: 35px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-item-input:focus {
+    outline: none;
+}
+
+.form-price-input {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-price-input:focus {
+    outline: none;
+}
+
+.form-category-selector {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    martin-top: 10px;
+    padding: 6px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #222;
+}
+
+.form-category-selector:focus {
+    outline: none;
+}
+
+.form-submit {
+    padding: 8px 16px;
+    margin-top: 25px;
+    width: 100px;
+    border: none;
+    background-color: #222;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+}
+
+.form-submit:focus {
+    outline: none;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}

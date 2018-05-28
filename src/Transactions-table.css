@@ -1,0 +1,16 @@
+.table {
+    left: 200px;
+    position: absolute;
+    top: 190px;
+    width: 700px;
+    text-align:center;
+}
+
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 1px solid #222;
+}
+
