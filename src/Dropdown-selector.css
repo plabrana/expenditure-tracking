@@ -1,0 +1,15 @@
+.form-selector {
+font-size: 15px;
+margin-left: 5px;
+margin-bottom: 20px;
+margin-top: 10px;
+padding: 6px;
+height: 35px;
+width: 100%;
+border: none;
+border-bottom: 2px solid #222;
+}
+
+.form-selector:focus {
+    outline: none;
+}

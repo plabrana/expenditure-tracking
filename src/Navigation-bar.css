@@ -1,5 +1,5 @@
-navigation-bar {
-    display: inline-block;
+.navigation-bar {
+    display: block;
     width: 150px;
     height: 100%;
 }

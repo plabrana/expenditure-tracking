@@ -1,4 +1,5 @@
 import React from 'react';
+import DropdownSelector from './Dropdown-selector';
 import './New-purchase-form.css';
 
 class PurchaseForm extends React.Component {
@@ -7,11 +8,13 @@ class PurchaseForm extends React.Component {
       this.state = {
         valueItem: ' ',
         valuePrice: ' ',
+        //valuePaymentMethod: ' ',
         valueCategory: ' '
       };
   
       this.handleItemChange = this.handleItemChange.bind(this);
       this.handlePriceChange = this.handlePriceChange.bind(this);
+      //this.handlePaymentMethodChange = this.handlePaymentMethodChange.bind(this);
       this.handleCategoryChange = this.handleCategoryChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -33,40 +36,48 @@ class PurchaseForm extends React.Component {
         valueCategory: event.target.value
       });
     }
+
+    /*handlePaymentMethodChange(event) {
+      this.setState({
+        valuePaymentMethod: event.target.value
+      });
+    }*/
   
     handleSubmit(event) {
-      alert('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
+      console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
       event.preventDefault();
     }
   
     render() {
+      let paymentOptions = ['','Efectivo', 'Debito', 'Credito']
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
               <div className='form-item'>
-                <label className='form-item-label'>
+                <label>
                   Item 
                   <input className='form-item-input' type="text" value={this.state.valueItem} onChange={this.handleItemChange} />
                 </label>
               </div>
               <div className='form-price'>
-                <label className='form-price-label'>
+                <label>
                   Price
                   <input className='form-price-input' type="number" value={this.state.valuePrice} onChange={this.handlePriceChange} />
                 </label>
               </div>
+              <DropdownSelector title="Payment Method" options = {paymentOptions} />
               <div className='form-category'>
-                <label className='form-category-label'>
+                <label>
                   Category
                   <select className='form-category-selector' type="text" value={this.state.valueCategory} onChange={this.handleCategoryChange}>
-                    <option valueCategory="Falopa"> </option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
-                    <option valueCategory="Falopa">Falopa</option>
+                    <option value=""></option>
+                    <option value="Falopa">Falopa</option>
+                    <option value="Faloaa">Falopa</option>
+                    <option value="Falopa">Falopa</option>
+                    <option value="Falopa">Falopa</option>
+                    <option value="Falopa">Falopa</option>
+                    <option value="Falopa">Falopa</option>
+                    <option value="Falopa">Falopa</option>
                   </select>
                 </label>
               </div>

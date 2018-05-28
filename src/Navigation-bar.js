@@ -27,6 +27,14 @@ const routes = [
   {
     path: "/yearly-summary",
     sidebar: () => <h2>Yearly Summary</h2>
+  },
+  {
+    path: "/investments",
+    sidebar: () => <h2>Investments</h2>
+  },
+  {
+    path: "/credit-cards",
+    sidebar: () => <h2>Credit Cards</h2>
   }
 ];
 
@@ -49,6 +57,12 @@ const NavBar = () => (
           </li>
           <li>
             <Link to="/yearly-summary">Yearly Summary</Link>
+          </li>
+          <li>
+            <Link to="/investments">Investments</Link>
+          </li>
+          <li>
+            <Link to="/credit-cards">Credit Cards</Link>
           </li>
         </ul>
 
