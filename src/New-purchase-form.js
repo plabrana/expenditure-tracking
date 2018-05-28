@@ -50,6 +50,7 @@ class PurchaseForm extends React.Component {
   
     render() {
       let paymentOptions = ['','Efectivo', 'Debito', 'Credito']
+      let categories = ['','Falopa','Falopota','Falopita']
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
@@ -65,23 +66,9 @@ class PurchaseForm extends React.Component {
                   <input className='form-price-input' type="number" value={this.state.valuePrice} onChange={this.handlePriceChange} />
                 </label>
               </div>
-              <DropdownSelector title="Payment Method" options = {paymentOptions} />
-              <div className='form-category'>
-                <label>
-                  Category
-                  <select className='form-category-selector' type="text" value={this.state.valueCategory} onChange={this.handleCategoryChange}>
-                    <option value=""></option>
-                    <option value="Falopa">Falopa</option>
-                    <option value="Faloaa">Falopa</option>
-                    <option value="Falopa">Falopa</option>
-                    <option value="Falopa">Falopa</option>
-                    <option value="Falopa">Falopa</option>
-                    <option value="Falopa">Falopa</option>
-                    <option value="Falopa">Falopa</option>
-                  </select>
-                </label>
-              </div>
-                  <input className='form-submit' type="submit" value="Submit" />
+              <DropdownSelector title="Payment Method" options={paymentOptions} />
+              <DropdownSelector title="Category" options={categories} />
+              <input className='form-submit' type="submit" value="Submit" />
             </form>
         </div>
       );
