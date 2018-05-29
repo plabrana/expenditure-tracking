@@ -18,7 +18,7 @@
     box-sizing: border-box;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #222;
+    border-bottom: 1px solid #222;
 }
 
 .form-item-input:focus {
@@ -35,26 +35,10 @@
     height: 35px;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #222;
+    border-bottom: 1px solid #222;
 }
 
 .form-price-input:focus {
-    outline: none;
-}
-
-.form-category-selector {
-    font-size: 15px;
-    margin-left: 5px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 6px;
-    height: 35px;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #222;
-}
-
-.form-category-selector:focus {
     outline: none;
 }
 

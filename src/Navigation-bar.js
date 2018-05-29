@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import "./Navigation-bar.css"
 import PurchaseForm from "./New-purchase-form";
 import Transactions from "./Transactions-table";
+import TodayTransactions from "./Today-transactions";
 
 const routes = [
   {
@@ -13,7 +14,7 @@ const routes = [
   {
     path: "/purchases",
     sidebar: () => <h2>Register New Purchase</h2>,
-    main: () => <PurchaseForm />
+    main: () => <div><PurchaseForm /> <TodayTransactions /></div>
   },
   {
     path: "/transactions",
