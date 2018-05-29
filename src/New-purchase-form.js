@@ -44,15 +44,9 @@ class PurchaseForm extends React.Component {
         valuePrice: event.target.value
       });
     }
-
-    handleCategoryChange(event) {
-      this.setState({
-        valueCategory: event.target.value
-      });
-    }
   
     handleSubmit(event) {
-      console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
+      console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice);
       event.preventDefault();
     }
   

@@ -2,9 +2,9 @@ import React from 'react';
 import './Dropdown-selector.css';
 
 class DropdownSelector extends React.Component {
-    constructor(props){
+    /*constructor(props){
         super(props);
-    }
+    }*/
 
     renderOptions() {
         let { options } = this.props;
@@ -16,8 +16,8 @@ class DropdownSelector extends React.Component {
             <div className='form-payment'>
                 <label>
                   {this.props.title}
-                  <select className='form-selector' type="text">
-                    <option disabled selected defaultValue="">{this.props.placeholder}</option>
+                  <select defaultValue={this.props.placeholder} className='form-selector' type="text">
+                    <option disabled>{this.props.placeholder}</option>
                     {this.renderOptions()}                  
                   </select>
                 </label>
