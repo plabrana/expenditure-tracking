@@ -3,24 +3,22 @@ import './Dropdown-selector.css';
 
 class DropdownSelector extends React.Component {
     constructor(props){
-    super(props);
-    this.getOptions = this.getOptions.bind(this);
-    this.title = this.props.title;
-    this.options = this.props.options;
+        super(props);
     }
 
-    getOptions() {
-        let listOptions = this.options.map((option, index) => <option key={index} value={option}>{option}</option>);
-        return listOptions;
+    renderOptions() {
+        let { options } = this.props;
+        return options.map((option, index) => <option key={index} value={option}>{option}</option>);
     }
 
     render(title) {
         return(
             <div className='form-payment'>
                 <label>
-                  {this.title}
+                  {this.props.title}
                   <select className='form-selector' type="text">
-                    {this.getOptions()}                  
+                    <option disabled selected defaultValue="">{this.props.placeholder}</option>
+                    {this.renderOptions()}                  
                   </select>
                 </label>
               </div>

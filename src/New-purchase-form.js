@@ -1,22 +1,36 @@
 import React from 'react';
 import DropdownSelector from './Dropdown-selector';
 import './New-purchase-form.css';
-
+import { categories } from './Firebase';
+import { paymentMethod } from './Firebase';
+ 
 class PurchaseForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
         valueItem: ' ',
         valuePrice: ' ',
-        //valuePaymentMethod: ' ',
-        valueCategory: ' '
+        categories: [''],
+        paymentMethod: ['']
       };
+
   
       this.handleItemChange = this.handleItemChange.bind(this);
       this.handlePriceChange = this.handlePriceChange.bind(this);
-      //this.handlePaymentMethodChange = this.handlePaymentMethodChange.bind(this);
-      this.handleCategoryChange = this.handleCategoryChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+      const categoriesRef = categories;
+      const paymentMethodRef = paymentMethod;
+
+      categories.on('value', snap => {
+        this.setState({categories: snap.val()});
+      });
+
+      paymentMethod.on('value', snap => {
+        this.setState({paymentMethod: snap.val()});
+      });
     }
   
     handleItemChange(event) {
@@ -36,12 +50,6 @@ class PurchaseForm extends React.Component {
         valueCategory: event.target.value
       });
     }
-
-    /*handlePaymentMethodChange(event) {
-      this.setState({
-        valuePaymentMethod: event.target.value
-      });
-    }*/
   
     handleSubmit(event) {
       console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
@@ -49,8 +57,7 @@ class PurchaseForm extends React.Component {
     }
   
     render() {
-      let paymentOptions = ['','Efectivo', 'Debito', 'Credito']
-      let categories = ['','Falopa','Falopota','Falopita']
+
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
@@ -66,8 +73,8 @@ class PurchaseForm extends React.Component {
                   <input className='form-price-input' type="number" value={this.state.valuePrice} onChange={this.handlePriceChange} />
                 </label>
               </div>
-              <DropdownSelector title="Payment Method" options={paymentOptions} />
-              <DropdownSelector title="Category" options={categories} />
+              <DropdownSelector placeholder="Choose a payment method" title="Payment Method" options={this.state.paymentMethod} />
+              <DropdownSelector placeholder="Choose a category" title="Category" options={this.state.categories} />
               <input className='form-submit' type="submit" value="Submit" />
             </form>
         </div>
