@@ -1,5 +1,6 @@
 import React from 'react';
 import DropdownSelector from './Dropdown-selector';
+import InputField from './Input-field'
 import './New-purchase-form.css';
 import { categories } from './Firebase';
 import { paymentMethod } from './Firebase';
@@ -14,9 +15,6 @@ class PurchaseForm extends React.Component {
         paymentMethod: ['']
       };
 
-  
-      this.handleItemChange = this.handleItemChange.bind(this);
-      this.handlePriceChange = this.handlePriceChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -33,24 +31,6 @@ class PurchaseForm extends React.Component {
       });
     }
   
-    handleItemChange(event) {
-      this.setState({
-        valueItem: event.target.value
-      });
-    }
-
-    handlePriceChange(event) {
-      this.setState({
-        valuePrice: event.target.value
-      });
-    }
-
-    handleCategoryChange(event) {
-      this.setState({
-        valueCategory: event.target.value
-      });
-    }
-  
     handleSubmit(event) {
       console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
       event.preventDefault();
@@ -61,18 +41,8 @@ class PurchaseForm extends React.Component {
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
-              <div className='form-item'>
-                <label>
-                  Item 
-                  <input className='form-item-input' type="text" value={this.state.valueItem} onChange={this.handleItemChange} />
-                </label>
-              </div>
-              <div className='form-price'>
-                <label>
-                  Price
-                  <input className='form-price-input' type="number" value={this.state.valuePrice} onChange={this.handlePriceChange} />
-                </label>
-              </div>
+              <InputField title="Item" />
+              <InputField title="Price" />
               <DropdownSelector placeholder="Choose a payment method" title="Payment Method" options={this.state.paymentMethod} />
               <DropdownSelector placeholder="Choose a category" title="Category" options={this.state.categories} />
               <input className='form-submit' type="submit" value="Submit" />
