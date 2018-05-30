@@ -2,9 +2,6 @@ import React from 'react';
 import './Dropdown-selector.css';
 
 class DropdownSelector extends React.Component {
-    constructor(props){
-        super(props);
-    }
 
     renderOptions() {
         let { options } = this.props;
