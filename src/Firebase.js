@@ -13,4 +13,8 @@ const app = initializeApp(config)
 export const db = app.database()
 export const categories = db.ref('categories')
 export const paymentMethod = db.ref('paymentMethod')
+<<<<<<< HEAD
 export const cards = db.ref('cards')
+=======
+export const cards = db.ref('cards')
+>>>>>>> 91caafc9495afb83db71010b5f990e504885c512

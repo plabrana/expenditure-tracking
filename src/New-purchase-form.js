@@ -27,14 +27,17 @@ class PurchaseForm extends React.Component {
       paymentMethod.on('value', snap => {
         this.setState({paymentMethod: snap.val()})
       });
+<<<<<<< HEAD
 
       cards.on('value', snap => {
         this.setState({cards: snap.val()})
       })
+=======
+>>>>>>> 91caafc9495afb83db71010b5f990e504885c512
     }
   
     handleSubmit(event) {
-      console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice + ' ' + this.state.valueCategory);
+      console.log('A product was submitted: ' + this.state.valueItem + ' ' + this.state.valuePrice);
       event.preventDefault();
     }
 
