@@ -7,7 +7,7 @@ class InputField extends React.Component {
             <div className='form-price'>
                 <label>
                     {this.props.title}
-                    <input className='form-input' type="number"/>
+                    <input type={this.props.type} className='form-input'/>
                 </label>
             </div>
         )

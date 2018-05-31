@@ -8,34 +8,10 @@ class Transactions extends React.Component{
             <table className='table'>
                 <tbody>
                     <tr>
-                        <th className='date-th'>Date</th>
-                        <th className='item-th'>Item</th>
-                        <th className='price-th'>Price</th>
-                        <th className='category-th'>Category</th>
-                    </tr>
-                    <tr>
-                        <td>January</td>
-                        <td>Falopita</td>
-                        <td>10</td>
-                        <td>Gastos Aleatorios</td>
-                    </tr>
-                    <tr>
-                        <td>January</td>
-                        <td>Falopita</td>
-                        <td>10</td>
-                        <td>Gastos Aleatorios</td>
-                    </tr>
-                    <tr>
-                        <td>January</td>
-                        <td>Falopita</td>
-                        <td>10</td>
-                        <td>Gastos Aleatorios</td>
-                    </tr>
-                    <tr>
-                        <td>January</td>
-                        <td>Falopita</td>
-                        <td>10</td>
-                        <td>Gastos Aleatorios</td>
+                        <th className='t-date-th'>Date</th>
+                        <th className='t-item-th'>Item</th>
+                        <th className='t-price-th'>Price</th>
+                        <th className='t-category-th'>Category</th>
                     </tr>
                 </tbody>
             </table>

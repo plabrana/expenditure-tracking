@@ -6,7 +6,7 @@
     text-align:center;
 }
 
-th, td {
+.t-date-th, .t-item-th, .t-price-th, .t-category-th {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 0px;

@@ -27,13 +27,10 @@ class PurchaseForm extends React.Component {
       paymentMethod.on('value', snap => {
         this.setState({paymentMethod: snap.val()})
       });
-<<<<<<< HEAD
 
       cards.on('value', snap => {
         this.setState({cards: snap.val()})
       })
-=======
->>>>>>> 91caafc9495afb83db71010b5f990e504885c512
     }
   
     handleSubmit(event) {
@@ -56,8 +53,8 @@ class PurchaseForm extends React.Component {
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
-              <InputField title="Item" />
-              <InputField title="Price" />
+              <InputField type='text' title="Item" />
+              <InputField type='number' title="Price" />
               <DropdownSelector placeholder="Choose a payment method" title="Payment Method" options={this.state.paymentMethod} />
                 {this.state.paymentMethod.value === "Credito" ? this.showCards() : null}
               <DropdownSelector placeholder="Choose a category" title="Category" options={this.state.categories} />

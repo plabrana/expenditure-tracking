@@ -10,8 +10,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <ThemeButton />
-        <Clock />
+        {/* <ThemeButton />
+        <Clock /> */}
         <Header />
         <NavBar />
       </div>
