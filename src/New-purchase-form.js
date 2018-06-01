@@ -53,8 +53,8 @@ class PurchaseForm extends React.Component {
       return (
         <div className='form-container'>
             <form onSubmit={this.handleSubmit} className='form'>
-              <InputField type='text' title="Item" />
-              <InputField type='number' title="Price" />
+              <InputField className="form-item-input" type='text' title="Item" />
+              <InputField className="form-price-input" type='number' title="Price" />
               <DropdownSelector placeholder="Choose a payment method" title="Payment Method" options={this.state.paymentMethod} />
                 {this.state.paymentMethod.value === "Credito" ? this.showCards() : null}
               <DropdownSelector placeholder="Choose a category" title="Category" options={this.state.categories} />

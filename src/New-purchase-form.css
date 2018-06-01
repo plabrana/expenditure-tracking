@@ -1,3 +1,6 @@
+input, select {
+    font-family: 'Roboto Slab', serif;
+}
 .form {
     display: block;
     left: 200px;
@@ -9,7 +12,6 @@
 }
 
 .form-item-input {
-    font-size: 15px;
     margin-left: 5px;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -26,7 +28,6 @@
 }
 
 .form-price-input {
-    font-size: 15px;
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -63,7 +64,7 @@
 }
 
 label {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     padding: 2px;
 }

@@ -10,7 +10,7 @@ class DropdownSelector extends React.Component {
 
     render(title) {
         return(
-            <div className='form-payment'>
+            <div>
                 <label>
                   {this.props.title}
                   <select defaultValue={this.props.placeholder} className='form-selector' type="text">
